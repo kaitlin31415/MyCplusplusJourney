@@ -1,0 +1,6 @@
+Entry Date: 25-07-2018
+Files Created: GradeBook.cpp
+Description of Work: Created a class called Gradebook with a getter and setter for a courseName Variable
+Comments: C++ is very similar to Java except in the syntax, I have to figure out what the const keyword does
+          but once I can figure out how to do constructors and initialize variables in there with the getters
+          and setters my life should be a bit easier
