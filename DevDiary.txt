@@ -4,3 +4,9 @@ Description of Work: Created a class called Gradebook with a getter and setter f
 Comments: C++ is very similar to Java except in the syntax, I have to figure out what the const keyword does
           but once I can figure out how to do constructors and initialize variables in there with the getters
           and setters my life should be a bit easier
+
+Entry Date: 30-07-2018
+Files Created: Runner.cpp
+Comments: I found out that you only have to compile the file with the main method and all included files will be
+          complied as well. Different from java. Also g++ *.cpp also works. This is weird, you have to make a .h file
+          for a preview with the class definition, then you create a cpp file to put the actual stuff in.

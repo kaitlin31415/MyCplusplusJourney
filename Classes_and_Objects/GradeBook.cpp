@@ -1,34 +1,32 @@
 #include<iostream>
 #include<string>
-
+#include "GradeBook.h"
 using namespace std;
-class Gradebook{
-private:
-  string courseName;
 
-public:
+
+ GradeBook:: GradeBook (std::string name )
+  {
+  setCourseName(name);
+  }
+
   //Function to display welcome message
-  void setCourseName(string c){
-    courseName = c;
+  void GradeBook::setCourseName(std::string c){
+    if (c.size() <= 25)
+      courseName = c;
+
+    if (c.size() > 25){
+      courseName = c.substr(0,25);
+
+      std::cerr << "Name \"" <<c<<"\"excedes maximum length (25).\n" <<
+      "Limiting courseName to first 25 characters. \n" <<endl;
+    }
+  }
+  string GradeBook::getCourseName() const{
+    return courseName +"!!!!";
 
   }
-  string getCourseName() const{
-    return courseName;
+
+  void GradeBook::displayMessage() const {
+    std::cout << "Welcome to the Grade book for: " <<getCourseName() << "!"<<'\n';
 
   }
-
-  void displayMessage() const {
-    cout << "Welcome to the Grade book for: " <<getCourseName() << "!"<<'\n';
-
-  }
-};
-
-int main() {
-  Gradebook g;
-  string name;
-  cout << "Please Enter the name of the course"<<'\n';
-  getline(cin, name);
-  cout <<'\n';
-  g.setCourseName(name);
-  g.displayMessage();
-}
